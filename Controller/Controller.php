@@ -36,6 +36,22 @@ class Controlador {
     }
 
     /**
+     * Altera os dados de um cliente no banco de dados.
+     *
+     * @param string $cpf CPF do cliente.
+     * @param string $nome Nome do cliente.
+     * @param string $dtnasc Data de nascimento do cliente.
+     * @param string $email Email do cliente.
+     * @param string $senha Senha do cliente.
+     *
+     * @return void
+     */
+    public function alterarCliente($cpf, $nome, $dtnasc, $email, $senha){
+        $this->bancoDeDados->alterarCliente($cpf, $nome, $dtnasc, $email, $senha);
+    }
+
+
+    /**
      * Insere um novo cliente no banco de dados.
      *
      * @param string $cpf CPF do cliente.

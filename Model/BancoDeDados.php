@@ -87,6 +87,24 @@ class BancoDeDados {
         return $resultado;
     }
     
+    // Função para alterar um cliente
+    public function alterarCliente($cpf, $nome, $email) {
+        $query = "UPDATE cliente SET nome = :nome, email = :email WHERE cpf = :cpf";
+        $stmt = $this->conexao->prepare($query);
+        $stmt->bindParam(':cpf', $id);
+        $stmt->bindParam(':nome', $nome);
+        $stmt->bindParam(':email', $email);
+        return $stmt->execute();
+    }
+
+    // Função para excluir um cliente
+    public function excluirCliente($id) {
+        $query = "DELETE FROM cliente WHERE id = :id";
+        $stmt = $this->conexao->prepare($query);
+        $stmt->bindParam(':id', $id);
+        return $stmt->execute();
+    }
+    
 }
 
 
