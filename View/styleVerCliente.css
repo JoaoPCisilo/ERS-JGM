@@ -1,15 +1,26 @@
 /* Estilos gerais do corpo */
 body {
     font-family: Arial, sans-serif; /* Define a fonte usada na página como Arial, com sans-serif como alternativa */
-    background-color: #218838; /* Define a cor de fundo da página como um verde */
+    background-color: #101010; /* Define a cor de fundo da página como um cinza escuro */
     margin: 0; /* Remove margens padrão do corpo */
     padding: 20px; /* Adiciona um espaço de 20 pixels em torno do conteúdo da página */
+}
+
+/* Estilo do cabeçalho */
+.header {
+    text-align: center; /* Centraliza o conteúdo dentro do cabeçalho */
+}
+
+/* Estilo da imagem do logotipo */
+.logo {
+    max-width: 100%; /* Faz com que a imagem não ultrapasse a largura do contêiner */
+    height: auto; /* Mantém a proporção da imagem ao redimensionar */
 }
 
 /* Estilo do título principal */
 h1 {
     text-align: center; /* Centraliza o texto do título */
-    color: #ffffff; /* Define a cor do texto como um branco */
+    color: #ffffff; /* Define a cor do texto como branco */
     margin-bottom: 20px; /* Adiciona um espaço de 20 pixels abaixo do título */
 }
 
@@ -25,15 +36,17 @@ h1 {
 
 /* Estilo dos subtítulos */
 h2 {
-    font-size: 18px; /* Define o tamanho da fonte dos subtítulos como 18 pixels */
-    color: #2c3e50; /* Define a cor do texto como um azul escuro */
-    margin: 0; /* Remove margens padrão do subtítulo */
-}
+    text-align: center; /* Centraliza o texto das mensagens */
+    font-size: 20px; /* Define o tamanho da fonte das mensagens como 20 pixels */
+    color: #f30b0b; /* Define a cor do texto das mensagens como vermelho claro */
+    font-weight: bold; /* Define a fonte como negrito */
+} 
+    
 
 /* Estilo dos parágrafos */
 p {
-    color: #000000; /* Define a cor do texto dos parágrafos como um cinza médio */
-    margin: 8px 0; /* Adiciona uma margem de 5 pixels acima e abaixo dos parágrafos */
+    color: #000000; /* Define a cor do texto dos parágrafos como preto */
+    margin: 8px 0; /* Adiciona uma margem de 8 pixels acima e abaixo dos parágrafos */
 }
 
 /* Estilo do formulário */
@@ -57,8 +70,8 @@ input[type="password"] {
 
 /* Estilo dos botões */
 button {
-    background-color: #1a4a14; /* Define a cor de fundo dos botões como verde */
-    color: white; /* Define a cor do texto dos botões como branco */
+    background-color: #000000; /* Define a cor de fundo dos botões como preto */
+    color: #fefefe; /* Define a cor do texto dos botões como branco */
     border: none; /* Remove a borda padrão dos botões */
     padding: 10px; /* Adiciona um espaço de 10 pixels dentro do botão */
     border-radius: 4px; /* Arredonda os cantos do botão */
@@ -68,15 +81,15 @@ button {
 
 /* Efeito de hover nos botões */
 button:hover {
-    background-color: #d0ffc0; /* Muda a cor de fundo do botão para um verde mais claro quando o mouse passa sobre ele */
+    background-color: #ffffff; /* Muda a cor de fundo do botão para branco quando o mouse passa sobre ele */
     color: rgb(10, 9, 9); /* Define a cor do texto do botão como preta */
-    font-weight: bold; /* Define a fonte como negrito */
+    font-weight: bold; /* Define a fonte como negrito ao passar o mouse */
 }
 
 /* Estilo para mensagens */
 p {
     text-align: center; /* Centraliza o texto das mensagens */
-    font-size: 20px; /* Define o tamanho da fonte das mensagens como 16 pixels */
-    color: #f30b0b; /* Define a cor do texto das mensagens como um vermelho claro */
+    font-size: 20px; /* Define o tamanho da fonte das mensagens como 20 pixels */
+    color: #f30b0b; /* Define a cor do texto das mensagens como vermelho claro */
     font-weight: bold; /* Define a fonte como negrito */
 }
