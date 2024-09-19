@@ -33,11 +33,11 @@
         // Verifica se a consulta retornou resultados
         if ($listaClientes && mysqli_num_rows($listaClientes) > 0) { // Confere se há clientes retornados
             // Itera sobre os resultados e gera o HTML para cada cliente
-            while ($cliente = mysqli_fetch_assoc($listaClientes)) { // Loop para cada cliente encontrado
-                echo "<section class=\"conteudo-bloco\">"; // Início de um bloco de conteúdo para o cliente
-                echo "<h2>" . $cliente["cpf"] . " - " . $cliente["nome"] . "</h2>"; // Exibe CPF e nome do cliente
-                echo "<p>Data de Nascimento: " . $cliente["dtnasc"] . "</p>"; // Exibe a data de nascimento do cliente
-                echo "<p>Email: " . $cliente["email"] . "</p>"; // Exibe o email do cliente
+            while ($cliente = mysqli_fetch_assoc($listaClientes)) {
+                echo "<section class=\"conteudo-bloco\">";
+                echo "<h2>" . $cliente["cpf"] . " - " . $cliente["nome"] . "</h2>";
+                echo "<p>Data de Nascimento: " . $cliente["dtnasc"] . "</p>";
+                echo "<p>Email: " . $cliente["email"] . "</p>";
 
                 // Formulário para alterar cliente
                 echo "<form method='POST' action='../processamento/processamento.php'>"; // Início do formulário para alteração
@@ -57,7 +57,7 @@
                 echo "<button type='submit'>Excluir</button>"; // Botão para submeter o formulário de exclusão
                 echo "</form>"; // Final do formulário de exclusão
 
-                echo "</section>"; // Final do bloco de conteúdo para o cliente
+                echo "</section>";
             }
         } else {
             echo "<p>Nenhum cliente encontrado.</p>"; // Mensagem caso não haja clientes
