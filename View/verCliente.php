@@ -28,7 +28,7 @@
             // Itera sobre os resultados e gera o HTML para cada cliente
             while ($cliente = mysqli_fetch_assoc($listaClientes)) {
                 echo "<section class=\"conteudo-bloco\">";
-                echo "<h2>" . $cliente["cpf"] . " - " . $cliente["nome"] . "</h2>";
+                echo "<p>" . $cliente["cpf"] . " - " . $cliente["nome"] . "</p>";
                 echo "<p>Data de Nascimento: " . $cliente["dtnasc"] . "</p>";
                 echo "<p>Email: " . $cliente["email"] . "</p>";
 
@@ -48,6 +48,11 @@
                 echo "<input type='hidden' name='cpf' value='" . $cliente['cpf'] . "'>";
                 echo "<input type='hidden' name='acao' value='excluir'>";
                 echo "<button type='submit'>Excluir</button>";
+                echo "</form>";
+
+                // Botão para voltar ao cadastroCliente.php
+                echo "<form method='POST' action='cadastroCliente.php'>";
+                echo "<button type='submit'>Voltar ao Cadastro</button>";
                 echo "</form>";
 
                 echo "</section>";
