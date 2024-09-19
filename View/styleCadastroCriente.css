@@ -1,0 +1,74 @@
+/* Estilos gerais do corpo */
+body {
+    font-family: Arial, sans-serif; /* Define a fonte usada na página como Arial, com sans-serif como alternativa */
+    background-color: #218838; /* Define a cor de fundo da página como um cinza claro */
+    margin: 0; /* Remove margens padrão do corpo */
+    padding: 20px; /* Adiciona um espaço de 20 pixels em torno do conteúdo da página */
+}
+
+/* Estilo da seção principal de cadastro */
+.conteudo-cadastro {
+    max-width: 600px; /* Define a largura máxima da seção como 600 pixels */
+    margin: auto; /* Centraliza a seção horizontalmente */
+    background: #ffff; /* Define o fundo da seção como branco */
+    padding: 20px; /* Adiciona um espaço de 20 pixels dentro da seção */
+    border-radius: 8px; /* Arredonda os cantos da seção */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra suave ao redor da seção */
+}
+
+/* Estilo do formulário */
+.conteudo-formulario-cadastro form {
+    display: flex; /* Usa um layout flexível para o formulário */
+    flex-direction: column; /* Organiza os itens do formulário em uma coluna */
+}
+
+/* Estilo dos rótulos do formulário */
+label {
+    font-weight: bold; /* Define o texto dos rótulos como negrito */
+    margin-bottom: 8px; /* Adiciona um espaço de 8 pixels abaixo de cada rótulo */
+}
+
+/* Estilo dos campos de entrada */
+input[type="text"],
+input[type="date"],
+input[type="email"],
+input[type="password"] {
+    padding: 10px; /* Adiciona um espaço de 10 pixels dentro dos campos de entrada */
+    margin-bottom: 15px; /* Adiciona um espaço de 15 pixels abaixo de cada campo */
+    border: 1px solid #ccc; /* Define uma borda cinza clara ao redor dos campos */
+    border-radius: 4px; /* Arredonda os cantos dos campos de entrada */
+    font-size: 16px; /* Define o tamanho da fonte dentro dos campos como 16 pixels */
+}
+
+/* Estilo do botão de envio */
+#botao {
+    background-color: #1a4a14; /* Define a cor de fundo do botão como verde */
+    color: white; /* Define a cor do texto do botão como branco */
+    border: none; /* Remove a borda padrão do botão */
+    padding: 10px; /* Adiciona um espaço de 10 pixels dentro do botão */
+    border-radius: 4px; /* Arredonda os cantos do botão */
+    font-size: 16px; /* Define o tamanho da fonte do botão como 16 pixels */
+    cursor: pointer; /* Muda o cursor para uma mão ao passar sobre o botão */
+}
+
+/* Efeito de hover no botão */
+#botao:hover {
+    background-color: #d0ffc0; /* Muda a cor de fundo do botão para um verde mais claro quando o mouse passa sobre ele */
+    color: rgb(10, 9, 9); /* Define a cor do texto do botão como preta */
+    font-weight: bold; /* Define a fonte como negrito */
+}
+
+/* Estilo do rodapé */
+footer {
+    text-align: center; /* Centraliza o texto no rodapé */
+    margin-top: 20px; /* Adiciona um espaço de 20 pixels acima do rodapé */
+    font-size: 14px; /* Define o tamanho da fonte do rodapé como 14 pixels */
+}
+
+/* Estilo dos nomes no rodapé */
+footer h1 {
+    margin: 5px 0; /* Adiciona uma margem de 5 pixels acima e abaixo do título no rodapé */
+    font-size: 16px; /* Define o tamanho da fonte do título no rodapé como 16 pixels */
+    color: #fdfbfb; /* Define a cor do texto do título no rodapé como um cinza médio */
+    font-weight: bold; /* Define a fonte como negrito */
+}

@@ -1,0 +1,82 @@
+/* Estilos gerais do corpo */
+body {
+    font-family: Arial, sans-serif; /* Define a fonte usada na página como Arial, com sans-serif como alternativa */
+    background-color: #218838; /* Define a cor de fundo da página como um verde */
+    margin: 0; /* Remove margens padrão do corpo */
+    padding: 20px; /* Adiciona um espaço de 20 pixels em torno do conteúdo da página */
+}
+
+/* Estilo do título principal */
+h1 {
+    text-align: center; /* Centraliza o texto do título */
+    color: #ffffff; /* Define a cor do texto como um branco */
+    margin-bottom: 20px; /* Adiciona um espaço de 20 pixels abaixo do título */
+}
+
+/* Estilo para cada bloco de cliente */
+.conteudo-bloco {
+    background: white; /* Define o fundo dos blocos como branco */
+    padding: 15px; /* Adiciona um espaço de 15 pixels dentro do bloco */
+    margin: 10px auto; /* Adiciona uma margem de 10 pixels em cima e embaixo, e centraliza horizontalmente */
+    border-radius: 8px; /* Arredonda os cantos do bloco */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra leve ao bloco */
+    max-width: 600px; /* Define a largura máxima do bloco como 600 pixels */
+}
+
+/* Estilo dos subtítulos */
+h2 {
+    font-size: 18px; /* Define o tamanho da fonte dos subtítulos como 18 pixels */
+    color: #2c3e50; /* Define a cor do texto como um azul escuro */
+    margin: 0; /* Remove margens padrão do subtítulo */
+}
+
+/* Estilo dos parágrafos */
+p {
+    color: #000000; /* Define a cor do texto dos parágrafos como um cinza médio */
+    margin: 8px 0; /* Adiciona uma margem de 5 pixels acima e abaixo dos parágrafos */
+}
+
+/* Estilo do formulário */
+form {
+    display: flex; /* Usa um layout flexível para o formulário */
+    flex-direction: column; /* Organiza os itens do formulário em uma coluna */
+    margin-top: 10px; /* Adiciona um espaço de 10 pixels acima do formulário */
+}
+
+/* Estilo dos campos de entrada */
+input[type="text"],
+input[type="date"],
+input[type="email"],
+input[type="password"] {
+    padding: 10px; /* Adiciona um espaço de 10 pixels dentro dos campos */
+    margin-bottom: 10px; /* Adiciona um espaço de 10 pixels abaixo de cada campo */
+    border: 1px solid #ccc; /* Define uma borda cinza clara ao redor dos campos */
+    border-radius: 4px; /* Arredonda os cantos dos campos de entrada */
+    font-size: 14px; /* Define o tamanho da fonte dentro dos campos como 14 pixels */
+}
+
+/* Estilo dos botões */
+button {
+    background-color: #1a4a14; /* Define a cor de fundo dos botões como verde */
+    color: white; /* Define a cor do texto dos botões como branco */
+    border: none; /* Remove a borda padrão dos botões */
+    padding: 10px; /* Adiciona um espaço de 10 pixels dentro do botão */
+    border-radius: 4px; /* Arredonda os cantos do botão */
+    font-size: 14px; /* Define o tamanho da fonte do botão como 14 pixels */
+    cursor: pointer; /* Muda o cursor para uma mão ao passar sobre o botão */
+}
+
+/* Efeito de hover nos botões */
+button:hover {
+    background-color: #d0ffc0; /* Muda a cor de fundo do botão para um verde mais claro quando o mouse passa sobre ele */
+    color: rgb(10, 9, 9); /* Define a cor do texto do botão como preta */
+    font-weight: bold; /* Define a fonte como negrito */
+}
+
+/* Estilo para mensagens */
+p {
+    text-align: center; /* Centraliza o texto das mensagens */
+    font-size: 20px; /* Define o tamanho da fonte das mensagens como 16 pixels */
+    color: #f30b0b; /* Define a cor do texto das mensagens como um vermelho claro */
+    font-weight: bold; /* Define a fonte como negrito */
+}

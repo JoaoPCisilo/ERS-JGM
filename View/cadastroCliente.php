@@ -12,7 +12,14 @@
     
     <!-- Define o ícone da página (favicon) -->
     <link rel="icon" href="../img/logo.png" type="image/png">
+
+    <!-- Biblioteca do Css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     
+    <!-- Link do Css -->
+    <link rel="stylesheet" href="styleCadastroCriente.css">
+
     <!-- Define o título da página que aparece na aba do navegador -->
     <title>Xhopii - Cadastro Cliente</title>
 </head>
@@ -53,6 +60,7 @@
         <h1>Gustavo Henrique Bispo Costa</h1>
         <h1>João Luiz Souza Pereira</h1>
         <h1>João Pedro de Souza Cisilo</h1>
+        <h1>Matheus Henrique da Conceição Bispo</h1>
     </footer>
 
 </body>
