@@ -1,41 +1,52 @@
 <?php
-    // Inclui o arquivo que define a classe Controlador
     require "../Controller/Controller.php";
 ?>
 
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <!-- Define a codificação de caracteres para o documento como UTF-8 -->
     <meta charset="UTF-8">
+    <title>Visualizar Clientes</title>
 </head>
 <body>
     <h1>Clientes</h1>
 
     <?php
         $controlador = new Controlador();
-        $listaClientes = $controlador->visualizarClientes(); 
-        echo $listaClientes; // Aqui você pode exibir a lista de clientes
+        $listaClientes = $controlador->visualizarClientes(); // Agora retorna um mysqli_result
+
+        // Verifica se a consulta retornou resultados
+        if ($listaClientes && mysqli_num_rows($listaClientes) > 0) {
+            // Itera sobre os resultados e gera o HTML para cada cliente
+            while ($cliente = mysqli_fetch_assoc($listaClientes)) {
+                echo "<section class=\"conteudo-bloco\">";
+                echo "<h2>" . $cliente["cpf"] . " - " . $cliente["nome"] . "</h2>";
+                echo "<p>Data de Nascimento: " . $cliente["dtnasc"] . "</p>";
+                echo "<p>Email: " . $cliente["email"] . "</p>";
+
+                // Formulário para alterar cliente
+                echo "<form method='POST' action='../processamento/processamento.php'>";
+                echo "<input type='hidden' name='cpf' value='" . $cliente['cpf'] . "'>";
+                echo "<input type='text' name='nome' value='" . $cliente['nome'] . "' required>";
+                echo "<input type='date' name='dtnasc' value='" . $cliente['dtnasc'] . "' required>";
+                echo "<input type='email' name='email' value='" . $cliente['email'] . "' required>";
+                echo "<input type='password' name='senha' placeholder='Nova senha' required>";
+                echo "<input type='hidden' name='acao' value='alterar'>";
+                echo "<button type='submit'>Alterar</button>";
+                echo "</form>";
+
+                // Formulário para excluir cliente
+                echo "<form method='POST' action='../processamento/processamento.php'>";
+                echo "<input type='hidden' name='cpf' value='" . $cliente['cpf'] . "'>";
+                echo "<input type='hidden' name='acao' value='excluir'>";
+                echo "<button type='submit'>Excluir</button>";
+                echo "</form>";
+
+                echo "</section>";
+            }
+        } else {
+            echo "<p>Nenhum cliente encontrado.</p>";
+        }
     ?>
-
-    <!-- Formulário para alterar cliente -->
-    <h2>Alterar Cliente</h2>
-    <form method="POST" action="../Model/alterar_cliente.php">
-        <label>CPF do Cliente: </label>
-        <input type="number" name="id" required><br>
-        <label>Nome: </label>
-        <input type="text" name="nome" required><br>
-        <label>Email: </label>
-        <input type="email" name="email" required><br>
-        <button type="submit">Alterar</button>
-    </form>
-
-    <!-- Formulário para excluir cliente -->
-    <h2>Excluir Cliente</h2>
-    <form method="POST" action="../Model/excluir_cliente.php">
-        <label>CPF do Cliente: </label>
-        <input type="number" name="id" required><br>
-        <button type="submit">Excluir</button>
-    </form>
 </body>
 </html>

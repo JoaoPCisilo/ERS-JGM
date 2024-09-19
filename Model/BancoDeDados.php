@@ -88,21 +88,17 @@ class BancoDeDados {
     }
     
     // Função para alterar um cliente
-    public function alterarCliente($cpf, $nome, $email) {
-        $query = "UPDATE cliente SET nome = :nome, email = :email WHERE cpf = :cpf";
-        $stmt = $this->conexao->prepare($query);
-        $stmt->bindParam(':cpf', $id);
-        $stmt->bindParam(':nome', $nome);
-        $stmt->bindParam(':email', $email);
-        return $stmt->execute();
+    public function alterarCliente($cpf, $nome, $dtnasc, $email) {
+        $conexao = $this->conectarBD();
+        $query = "UPDATE cliente SET nome = '$nome', dtnasc = '$dtnasc', email = '$email' WHERE cpf = '$cpf'";
+        return mysqli_query($conexao, $query);
     }
 
     // Função para excluir um cliente
-    public function excluirCliente($id) {
-        $query = "DELETE FROM cliente WHERE id = :id";
-        $stmt = $this->conexao->prepare($query);
-        $stmt->bindParam(':id', $id);
-        return $stmt->execute();
+    public function excluirCliente($cpf) {
+        $conexao = $this->conectarBD();
+        $query = "DELETE FROM cliente WHERE cpf = '$cpf'";
+        return mysqli_query($conexao, $query);
     }
     
 }

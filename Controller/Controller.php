@@ -32,7 +32,7 @@ class Controlador {
             $resultado .= "<p>Data: " . $cliente["dtnasc"] . "</p>";
             $resultado .= "<p>Email: " . $cliente["email"] . "</p>";
         }
-        return $resultado;
+        return $this->bancoDeDados->retornarClientes();
     }
 
     /**
@@ -46,8 +46,8 @@ class Controlador {
      *
      * @return void
      */
-    public function alterarCliente($cpf, $nome, $dtnasc, $email, $senha){
-        $this->bancoDeDados->alterarCliente($cpf, $nome, $dtnasc, $email, $senha);
+    public function alterarCliente($cpf, $nome, $dtnasc, $email) {
+        $this->bancoDeDados->alterarCliente($cpf, $nome, $dtnasc, $email);
     }
 
 
@@ -64,6 +64,32 @@ class Controlador {
      */
     public function inserirCliente($cpf, $nome, $dtnasc, $email, $senha){
         $this->bancoDeDados->inserirCliente($cpf, $nome, $dtnasc, $email, $senha);
+    }
+
+    /**
+     * Exclui um cliente do banco de dados.
+     *
+     * @param string $cpf CPF do cliente.
+     *
+     * @return void
+     */
+    public function excluirCliente($cpf) {
+        $this->bancoDeDados->excluirCliente($cpf);
+    }
+    /**
+     * Processa a requisição de alteração ou exclusão de um cliente.
+     *
+     * @param string $acao Ação a ser executada (alterar ou excluir).
+     * @param array $dados Dados do cliente.
+     *
+     * @return void
+     */
+    public function processarRequisicao($acao, $dados){
+        if ($acao === 'alterar') {
+            $this->alterarCliente($dados['cpf'], $dados['nome'], $dados['dtnasc'], $dados['email']);
+        } elseif ($acao === 'excluir') {
+            $this->excluirCliente($dados['cpf']);
+        }
     }
 }
 ?>
