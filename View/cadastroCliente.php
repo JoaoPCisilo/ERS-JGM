@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="styleCadastroCriente.css">
 
     <!-- Define o título da página que aparece na aba do navegador -->
-    <title>Xhopii - Cadastro Cliente</title>
+    <title>jgm - Cadastro Cliente</title>
 </head>
 <body>
 
