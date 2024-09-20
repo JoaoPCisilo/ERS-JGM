@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="styleCadastroCriente.css">
 
     <!-- Define o título da página que aparece na aba do navegador -->
-    <title>jgm - Cadastro Cliente</title>
+    <title>JGM - Cadastro Cliente</title>
 </head>
 <body>
 
@@ -64,7 +64,7 @@
 
     <!-- Seção de rodapé com os nomes dos responsáveis -->
     <footer>
-        <h1>Gustavo Henrique Bispo Costa, Matheus Henrique da Conceição Bispo, João Luiz Souza Pereira e João Pedro de Souza Cisilo </h1> <!-- Exibe os nomes dos responsáveis -->
+        <h1>Gustavo Henrique Bispo Costa, João Luiz Souza Pereira, João Pedro de Souza Cisilo, Matheus Henrique da Conceição Bispo e Victor Azambuja da Silva </h1> <!-- Exibe os nomes dos responsáveis -->
     </footer>
     
 </body>

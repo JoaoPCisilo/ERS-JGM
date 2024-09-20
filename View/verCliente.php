@@ -57,6 +57,10 @@
                 echo "<button type='submit'>Excluir</button>"; // Botão para submeter o formulário de exclusão
                 echo "</form>"; // Final do formulário de exclusão
 
+                echo "<form method='GET' action='cadastroCliente.php'>"; // Início do formulário para voltar à página de cadastro
+                echo "<button type='submit'>Voltar</button>"; // Botão para submeter o formulário e voltar
+                echo "</form>"; // Final do formulário
+
                 echo "</section>";
             }
         } else {

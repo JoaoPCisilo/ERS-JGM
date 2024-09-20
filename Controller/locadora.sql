@@ -1,24 +1,23 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
--- https://www.phpmyadmin.net/
+-- version 4.1.4
+-- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 12-Set-2024 às 18:30
--- Versão do servidor: 10.4.27-MariaDB
--- versão do PHP: 8.2.0
+-- Generation Time: 20-Set-2024 às 02:33
+-- Versão do servidor: 5.6.15-log
+-- PHP Version: 5.5.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
+/*!40101 SET NAMES utf8 */;
 
 --
--- Banco de dados: `locadora`
+-- Database: `locadora`
 --
 
 -- --------------------------------------------------------
@@ -27,24 +26,23 @@ SET time_zone = "+00:00";
 -- Estrutura da tabela `cliente`
 --
 
-CREATE TABLE `cliente` (
+CREATE TABLE IF NOT EXISTS `cliente` (
   `cpf` int(11) NOT NULL,
   `nome` varchar(200) NOT NULL,
   `dtnasc` date NOT NULL,
   `email` varchar(200) NOT NULL,
-  `senha` varchar(200) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  `senha` varchar(200) NOT NULL,
+  PRIMARY KEY (`cpf`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Índices para tabelas despejadas
+-- Extraindo dados da tabela `cliente`
 --
 
---
--- Índices para tabela `cliente`
---
-ALTER TABLE `cliente`
-  ADD PRIMARY KEY (`cpf`);
-COMMIT;
+INSERT INTO `cliente` (`cpf`, `nome`, `dtnasc`, `email`, `senha`) VALUES
+(123, 'JoÃ£o', '2024-01-01', 'joaopedro01032006@gmail.com', '123'),
+(403086889, 'Gustavo', '2006-03-14', 'Gustavo@gmail.com', '123'),
+(2147483647, 'JoÃ£o Luiz', '2006-01-25', 'joao@gmail.com', '123');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
